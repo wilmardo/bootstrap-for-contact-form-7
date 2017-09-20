@@ -32,7 +32,7 @@ class CF7BS_Form_Field extends CF7BS_Component {
 				$input_div_class = '';
 				$input_class = $class;
 				if ( 'horizontal' == $form_layout ) {
-					$label_class .= ' control-label';
+					$label_class .= ' form-control-label';
 					$classes = $this->get_column_width_classes( $form_label_width, $form_breakpoint, $grid_columns );
 					$label_class .= ' ' . $classes['label'];
 					$input_div_class = $classes['input'];
@@ -60,9 +60,9 @@ class CF7BS_Form_Field extends CF7BS_Component {
 
 					if ( 'textarea' != $type ) {
 						if ( 'large' == $size ) {
-							$input_class .= ' input-lg';
+							$input_class .= ' form-control-lg';
 						} elseif ( in_array( $size, array( 'small', 'mini' ) ) ) {
-							$input_class .= ' input-sm';
+							$input_class .= ' form-control-sm';
 						}
 					}
 
@@ -353,11 +353,11 @@ class CF7BS_Form_Field extends CF7BS_Component {
 					} else {
 						if ( ! empty( $input_before ) || ! empty( $input_after ) ) {
 							$input_group_class = 'input-group';
-							if ( false !== strpos( $input_class, ' input-lg') ) {
-								$input_class = str_replace( ' input-lg', '', $input_class );
+							if ( false !== strpos( $input_class, ' form-control-lg') ) {
+								$input_class = str_replace( ' form-control-lg', '', $input_class );
 								$input_group_class .= ' input-group-lg';
-							} elseif ( false !== strpos( $input_class, ' input-sm') ) {
-								$input_class = str_replace( ' input-sm', '', $input_class );
+							} elseif ( false !== strpos( $input_class, ' form-control-sm') ) {
+								$input_class = str_replace( ' form-control-sm', '', $input_class );
 								$input_group_class .= ' input-group-sm';
 							}
 							$output .= '<div class="' . $input_group_class . '">';
@@ -384,7 +384,7 @@ class CF7BS_Form_Field extends CF7BS_Component {
 
 			if ( 'hidden' != $type && 'none' != $form_layout ) {
 				if ( ! empty( $help_text ) && 'inline' != $form_layout ) {
-					$output .= '<span class="help-block">' . $help_text . '</span>';
+					$output .= '<span class="form-text">' . $help_text . '</span>';
 				}
 
 				if ( 'horizontal' == $form_layout ) {

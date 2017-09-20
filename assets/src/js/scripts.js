@@ -9,9 +9,9 @@
 
 		if ( ! $target.parents( '.wpcf7-form' ).hasClass( 'form-inline' ) ) {
 			if ( $target.parents( '.wpcf7-form' ).hasClass( 'form-horizontal' ) ) {
-				$target.children( 'div' ).append( '<span class="help-block wpcf7-not-valid-tip">' + message + '</span>' );
+				$target.children( 'div' ).append( '<span class="form-text wpcf7-not-valid-tip">' + message + '</span>' );
 			} else {
-				$target.append( '<span class="help-block wpcf7-not-valid-tip">' + message + '</span>' );
+				$target.append( '<span class="form-text wpcf7-not-valid-tip">' + message + '</span>' );
 			}
 
 			if ( $target.is( '.use-floating-validation-tip *' ) ) {
@@ -64,9 +64,9 @@
 			if ( ! $into.parents( '.wpcf7-form' ).hasClass( 'form-inline' ) ) {
 				$into.find( 'span.wpcf7-not-valid-tip' ).remove();
 				if ( $into.parents( '.wpcf7-form' ).hasClass( 'form-horizontal' ) ) {
-					$into.children( 'div' ).append( '<span class="help-block wpcf7-not-valid-tip">' + message + '</span>' );
+					$into.children( 'div' ).append( '<span class="form-text wpcf7-not-valid-tip">' + message + '</span>' );
 				} else {
-					$into.append( '<span class="help-block wpcf7-not-valid-tip">' + message + '</span>' );
+					$into.append( '<span class="form-text wpcf7-not-valid-tip">' + message + '</span>' );
 				}
 				$into.slideDown( 'fast' );
 
